@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatBox-Unimayor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('fondo4.jpg');
+            background-size: contain;
+            background-position: center;
+            margin: 40;
+            padding: 10;
+            font-family: Arial, sans-serif;
+            background-color: #1a1919;
+            margin: 10;
+            padding: 10;
+        }
+        .chat-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #d4c7c7;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(247, 245, 245, 0.2);
+            overflow: hidden;
+        }
+        #chat-box {
+            padding: 70px;
+            overflow-y: auto;
+            height: 300px;
+        }
+        .message-container {
+            overflow: auto;
+            clear: both;
+            margin-bottom: 5%;
+        }
+        .message {
+            padding: 10px;
+            border-radius: 50px;
+            word-wrap: break-word;
+            clear: both;
+            max-width: 100%;
+            margin-bottom: 5px
+        }
+        .user-message {
+            background-color: #66d114;
+            float: right;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* tipo de letra*/
+        }
+        .bot-message {
+            background-color: #a5a5f3ad;
+            float: left;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* tipo de letra */
+        }
+        #user-input-container {
+            padding: 10px;
+            background-color: #d4c7c7;
+            border-top: 2px solid #8b8484;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+        }
+        #user-input {
+            width: calc(100% - 97px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #768079;
+            float: left;
+        }
+        #send-button {
+            width: 70px;
+            padding: 10px;
+            background-color: #00ff59;
+            color: rgb(241, 236, 236);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            float: right;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        #send-button:hover {
+            background-color: #00e653;
+        }
+        .title {
+            text-align: center;
+            color: #000000;
+            padding: 15px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /*font-family: 'Comic Sans MS', cursive, sans-serif;  Añade esta línea */
+        }
+        .title img {
+            height: 80px;
+            margin-bottom: -5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="title">
+            <img src="logo2.png" alt="Logo Unimayor">
+            ChatBox-Unimayor
+        </div>
+        <div id="chat-box"></div>
+        <div id="user-input-container">
+            <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+            <button id="send-button" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
